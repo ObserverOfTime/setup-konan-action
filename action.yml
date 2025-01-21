@@ -1,0 +1,15 @@
+name: Set up Kotlin/Native
+description: Download Kotlin/Native toolchain
+
+branding:
+  color: purple
+  icon: download-cloud
+
+inputs:
+  kotlin_version:
+    description: The Kotlin version
+    required: true
+
+runs:
+  using: node20
+  main: dist/index.js

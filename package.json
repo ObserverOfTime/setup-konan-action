@@ -1,0 +1,26 @@
+{
+  "name": "@observeroftime/setup-konan-action",
+  "description": "A GitHub action for setting up Kotlin/Native",
+  "repository": "github:ObserverOfTime/setup-konan-action",
+  "version": "0.1.0",
+  "license": "MIT",
+  "main": "src/main.js",
+  "type": "module",
+  "private": true,
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "scripts": {
+    "prepare": "ncc build -m --target es2022 src/index.js",
+    "test": "local-action . src/main.js"
+  },
+  "dependencies": {
+    "@actions/core": "^1.11.1",
+    "@actions/tool-cache": "^2.0.2",
+    "semver": "^7.6.3"
+  },
+  "devDependencies": {
+    "@github/local-action": "^2.5.1",
+    "@vercel/ncc": "^0.38.3"
+  }
+}
